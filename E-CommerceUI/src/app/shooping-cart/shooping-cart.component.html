@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<div class="shopping-cart-container">
+    <h2 class="cart-title">Shopping Cart</h2>
+
+    <!-- Display message if user is not logged in or no items found -->
+    <div *ngIf="message" class="message">{{ message }}</div>
+
+    <!-- Display cart items if any are present -->
+    <div *ngIf="cartItems.length > 0">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cartItems">
+                    <td>{{ item.productName }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.price | currency }}</td>
+                    <td>{{ item.quantity * item.price | currency }}</td>
+                    <td>
+                        <button class="remove-button" (click)="removeItem(item.id)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <p>Total Items: {{ cartItems.length }}</p>
+            <!-- <p>Total Price: {{ calculateTotal() | currency }}</p> -->
+            <!-- <div class="cart-actions">
+                <button (click)="router.navigate(['/products'])" class="continue-shopping">Continue Shopping</button>
+                <button (click)="router.navigate(['/checkout'])" class="checkout-button">Proceed to Checkout</button>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Display a message if the cart is empty -->
+    <div *ngIf="cartItems.length === 0 && !message" class="empty-cart">
+        <p>Your shopping cart is empty.</p>
+    </div>
+</div>
+<app-footer></app-footer>

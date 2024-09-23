@@ -1,0 +1,43 @@
+/* Dashboard container */
+.dashboard-container {
+    padding: 2rem;
+    background-color: #f4f6f9;
+  }
+  
+  /* Welcome section */
+  .welcome-section {
+    margin-bottom: 2rem;
+  }
+  
+  .welcome-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .welcome-message {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Image gallery */
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+  

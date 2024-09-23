@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm px-4">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="assets/images/logo.png" alt="Logo" class="logo mr-2"> 
+    <span class="brand-name">N-com</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <!-- Home Link -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+  
+      <!-- Conditionally Display Links Based on Login Status -->
+      <ng-container *ngIf="isLogin(); else loggedOutLinks">
+        <!-- Links shown when logged in -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Product
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/products">Add Product</a>
+            <a class="dropdown-item" routerLink="/productlist">Product List</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/orders">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/wishlist">Wishlist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/shopping-cart">Cart</a>
+        </li>
+      </ng-container>
+
+      <!-- Links shown when not logged in -->
+      <ng-template #loggedOutLinks>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary ml-2" routerLink="/login">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary ml-2" routerLink="/register">Register</a>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>

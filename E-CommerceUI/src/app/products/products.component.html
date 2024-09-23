@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="login-box">
+        <h2 class="login-title">Product Details</h2>
+
+        <form (ngSubmit)="onSubmit()">
+            <!-- Display general success message if applicable -->
+            <div *ngIf="form.message != null && inputerror == null" class="alert alert-success" role="alert">
+                {{ form.message }}
+            </div>
+            <!-- Display general error message if applicable -->
+            <div *ngIf="form.message != null && inputerror != null" class="alert alert-danger" role="alert">
+                {{ form.message }}
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" [(ngModel)]="form.data.name" required class="form-control">
+                <span *ngIf="inputerror['name']" class="text-danger">{{ inputerror['name'] }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" [(ngModel)]="form.data.description" required class="form-control">
+                <span *ngIf="inputerror['description']" class="text-danger">{{ inputerror['description'] }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" [(ngModel)]="form.data.price" required class="form-control">
+                <span *ngIf="inputerror['price']" class="text-danger">{{ inputerror['price'] }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="dateOfPurchase">Date of Purchase</label>
+                <input type="date" name="dateOfPurchase" id="dateOfPurchase" [(ngModel)]="form.data.dateOfPurchase" required class="form-control">
+                <span *ngIf="inputerror['dateOfPurchase']" class="text-danger">{{ inputerror['dateOfPurchase'] }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" name="category" id="category" [(ngModel)]="form.data.category" required class="form-control">
+                <span *ngIf="inputerror['category']" class="text-danger">{{ inputerror['category'] }}</span>
+            </div>
+
+            <!-- New Image Upload Field -->
+            <div class="form-group">
+                <label for="file">Product Image</label>
+                <input type="file" name="file" id="file" (change)="onFileSelected($event)" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>

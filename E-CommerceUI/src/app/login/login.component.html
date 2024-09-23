@@ -1,0 +1,94 @@
+<!-- Updated HTML for the Login Form -->
+<app-navbar></app-navbar>
+<div class="login-container">
+    <div class="login-box">
+        <h2 class="login-title">Login</h2>
+        <form (ngSubmit)="onLogin()">
+            <!-- Display general error message if login fails -->
+            <div *ngIf="message" class="alert alert-danger">{{ message }}</div>
+
+            <div class="form-group">
+                <label for="loginId">LoginId</label>
+                <input type="text" name="loginId" id="loginId" [(ngModel)]="form.loginId" required class="form-control">
+                <!-- Display loginId error -->
+                <span *ngIf="inputerror['loginId']" class="text-danger">{{ inputerror['loginId'] }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" [(ngModel)]="form.password" required class="form-control">
+                <!-- Display password error -->
+                <span *ngIf="inputerror['password']" class="text-danger">{{ inputerror['password'] }}</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full height to center vertically */
+        background-color: #f4f7f9; /* Light background for the whole page */
+    }
+
+    .login-box {
+        width: 400px; /* Fixed width for consistency */
+        padding: 30px;
+        border: 1px solid #ddd; /* Light border */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        background-color: #fff; /* White background for contrast */
+    }
+
+    .login-title {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333; /* Dark color for better readability */
+        font-weight: bold;
+    }
+
+    .form-group {
+        margin-bottom: 20px; /* Space between fields */
+    }
+
+    .form-control {
+        border: 1px solid #ccc; /* Border around input fields */
+        border-radius: 4px; /* Slightly rounded corners */
+        padding: 10px;
+        font-size: 16px;
+        transition: border-color 0.3s ease; /* Smooth border color change */
+    }
+
+    .form-control:focus {
+        border-color: #007bff; /* Highlighted border on focus */
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Subtle glow effect */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Primary button color */
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }
+
+    .text-danger {
+        font-size: 14px; /* Slightly smaller font for error messages */
+        color: #d9534f; /* Red color for error messages */
+        margin-top: 5px;
+        display: block; /* Display error messages on a new line */
+    }
+</style>
+<app-footer></app-footer>

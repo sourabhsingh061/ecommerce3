@@ -1,0 +1,63 @@
+/* Footer Styling */
+.footer {
+    background-color: #343a40; /* Dark background for the footer */
+    color: #fff; /* White text color */
+    padding: 40px 0;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+.footer-bottom {
+    background-color: #23272b; /* Slightly darker background for bottom */
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-bottom small {
+    display: block;
+    margin-top: 10px;
+}

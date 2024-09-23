@@ -1,0 +1,137 @@
+/* Navbar Styling */
+.navbar {
+  background-color: #1a1a1a; /* Dark background for a high-tech look */
+  border-bottom: 1px solid #333333; /* Subtle border for separation */
+  padding: 1rem 2rem; /* More padding for a spacious feel */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+  color: #1c49aa !important; /* White text for the brand */
+  font-weight: bold;
+  font-size: 1.5rem; /* Slightly larger font for brand name */
+  letter-spacing: 0.05rem; /* Slight spacing for a modern look */
+}
+
+.logo {
+  height: 50px; /* Larger logo for visibility */
+  margin-right: 0.5rem; /* Space between logo and brand name */
+}
+
+.navbar-nav .nav-link {
+  color: #d3d3d3 !important; /* Light grey text for nav links */
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem; /* Padding for clickable area */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00bcd4 !important; /* Accent color on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+  border-radius: 0.25rem; /* Rounded corners on hover */
+}
+
+.nav-item.dropdown .dropdown-menu {
+  background-color: #2a2a2a; /* Dark background for dropdown */
+  border: none; /* Remove default border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  border-radius: 0.25rem; /* Rounded corners for dropdown */
+}
+
+.dropdown-item {
+  color: #d3d3d3; /* Light grey text for dropdown items */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #00bcd4; /* Accent color background on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.btn-outline-primary {
+  color: #00bcd4;
+  border-color: #00bcd4;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem; /* Slightly rounded corners */
+}
+
+.btn-outline-primary:hover {
+  background-color: #00bcd4;
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem; /* Slightly rounded corners */
+}
+
+.btn-primary:hover {
+  background-color: #0097a7; /* Slightly darker on hover */
+  border-color: #007b83;
+}
+
+/* Navbar toggler for mobile view */
+.navbar-toggler {
+  border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%280, 188, 212, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+  /* Custom icon color */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .navbar-brand .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+  }
+}
+/* Add a gradient background to the navbar */
+.bg-gradient {
+  background: linear-gradient(45deg, #cad1d7, #404851);
+}
+
+/* Main background of the page */
+body {
+  background-color: #f3f6f9;
+  background-image: linear-gradient(180deg, #e16e6e 0%, #aec7e0 100%);
+}
+
+/* Adding shadow and slight hover effect to navbar */
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  background: linear-gradient(45deg, #ffffff, #e9ecef);
+}
+
+/* Button Styles */
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
